@@ -6,6 +6,10 @@
  * Never change a running system.
  *
  * Get Updates from http://builds.emberjs.com/
+ *
+ * Smallest possible resolution
+ * Width: 1050px Height: 600px
+ *
  */
 var App = Ember.Application.create();
 

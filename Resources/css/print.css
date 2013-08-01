@@ -1,0 +1,6 @@
+.doNotPrintContent {
+    display:none;
+}
+.doNotPrintBorder {
+      border: none;
+}

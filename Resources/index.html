@@ -6,8 +6,9 @@
   <link rel="stylesheet" href="css/normalize.css" media="all">
   <link rel="stylesheet" href="css/bootstrap.css" media="all">
   <link rel="stylesheet" href="css/style.css" media="all">
-  <link rel="stylesheet" href="calendar/icons.css" media="all">
-  <link rel="stylesheet" href="calendar/bootstrap-formhelpers.css">
+  <link rel="stylesheet" href="calendar/icons.css" media="screen">
+  <link rel="stylesheet" href="calendar/bootstrap-formhelpers.css" media="screen">
+  <link rel="stylesheet" href="css/print.css" media="print">
 </head>
 <body>
 
@@ -49,6 +50,7 @@
                 {{#each model.vine}}
                 <tr><td>
                     {{title}}
+                    <i class="right icon-large icon-edit"></i>
                 </td></tr>
                 {{/each}}
             </table>
@@ -61,6 +63,7 @@
                 {{#each model.meal}}
                 <tr><td>
                     {{title}}
+                    <i class="right icon-large icon-edit"></i>
                 </td></tr>
                 {{/each}}
             </table>
@@ -70,7 +73,7 @@
 <script type="text/x-handlebars" data-template-name="menu">
 
     <div class="row">
-        <div class="col-6 col-lg-4">
+        <div class="col-6 col-lg-4 doNotPrintContent">
             <div class="panel panel-info">
                 <div class="panel-heading">
                     <h3 class="panel-title">Wähle einen Tag</h3>
@@ -107,7 +110,7 @@
             </div>
         </div>
             <div class="col-6 col-lg-4">
-                <div class="panel panel-primary">
+                <div class="panel panel-primary doNotPrintBorder">
                     <div class="panel-heading">
                         <h3 class="panel-title">Wähle die Getränke</h3>
                     </div>
@@ -118,7 +121,7 @@
                 </div>
             </div>
         <div class="col-6 col-lg-4">
-            <div class="panel panel-primary">
+            <div class="panel panel-primary doNotPrintBorder">
                 <div class="panel-heading">
                     <h3 class="panel-title">Wähle die Speisen</h3>
                 </div>
