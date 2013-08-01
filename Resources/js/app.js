@@ -37,10 +37,27 @@ App.ApplicationView = Ember.View.extend({
     }.observes('controller.currentPath')
 });
 
+App.MenuRoute = Ember.Route.extend({
+    redirect: function() {
+        this.transitionTo('menu');
+    }
+});
+
 App.InventoryRoute = Ember.Route.extend({
     model: function(){
         return Ember.Object.create({vine: App.Vine.find(), meal: App.Meal.find()});
     }
+});
+
+App.AutoCompleteVineController = Ember.Controller.extend({
+    searchText: null,
+    searchResults: function(){
+        var searchText = this.get('searchText');
+        if(!searchText){ return;}
+         return['one','two', 'three'].filter(function(name){
+            return name.match(searchText);
+         });
+    }.property('searchText')
 });
 
 App.Store = DS.Store.extend({
